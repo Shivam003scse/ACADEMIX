@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.TimetableViewController"
+            style="-fx-background-color: linear-gradient(to bottom, #ffffff, #f2f2f2);"
+            prefWidth="900" prefHeight="600">
+
+    <VBox alignment="TOP_CENTER" spacing="20"
+          AnchorPane.topAnchor="30" AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30" AnchorPane.bottomAnchor="30">
+
+        <Label text="📅 Class Timetable"
+               style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+        <TableView fx:id="timetableTable" prefWidth="840" prefHeight="450"
+                   style="-fx-background-radius: 12; -fx-border-radius: 12;
+                          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+            <columns>
+                <TableColumn fx:id="subjectCol" text="Subject" prefWidth="200"
+                             style="-fx-font-size: 14px; -fx-text-fill: #34495e;" />
+                <TableColumn fx:id="dayCol" text="Day" prefWidth="120"
+                             style="-fx-font-size: 14px; -fx-text-fill: #34495e;" />
+                <TableColumn fx:id="timeCol" text="Time Slot" prefWidth="200"
+                             style="-fx-font-size: 14px; -fx-text-fill: #34495e;" />
+                <TableColumn fx:id="teacherCol" text="Teacher" prefWidth="320"
+                             style="-fx-font-size: 14px; -fx-text-fill: #34495e;" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="backButton" text="Back to Dashboard"
+                onAction="#handleBack"
+                style="-fx-background-color: #3498db; -fx-text-fill: white;
+                       -fx-font-size: 14px; -fx-background-radius: 8;
+                       -fx-padding: 8 16;"
+                onMouseEntered="#onHoverIn" onMouseExited="#onHoverOut"/>
+    </VBox>
+
+</AnchorPane>

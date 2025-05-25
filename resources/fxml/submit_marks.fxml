@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <?import javafx.scene.control.*?>
+        <?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.SubmitMarksController"
+      spacing="20" alignment="CENTER" style="-fx-padding: 20;">
+
+    <Label text="Submit Marks &amp; Feedback"
+           style="-fx-font-family: 'Poppins Semibold'; -fx-font-size: 24px; -fx-text-fill: #b22222;"/>
+
+    <GridPane hgap="15" vgap="12">
+        <Label text="Select Student:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <ComboBox fx:id="studentComboBox" promptText="Select Student" prefWidth="220" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Select Subject:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <ComboBox fx:id="subjectComboBox" promptText="Select Subject" prefWidth="220" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Marks:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="marksField" promptText="Enter Marks" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Feedback:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextArea fx:id="feedbackArea" promptText="Enter feedback" prefRowCount="3" prefWidth="220" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    </GridPane>
+
+    <Button fx:id="submitButton" text="Submit" onAction="#handleSubmit"
+            style="-fx-background-color: #b22222; -fx-text-fill: white; -fx-background-radius: 10;"/>
+</VBox>
