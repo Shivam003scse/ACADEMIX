@@ -1,96 +1,157 @@
-ACADEMIX 🎓
-Welcome to ACADEMIX — your comprehensive academic management system designed to simplify and enhance communication among students, teachers, and parents. Built with JavaFX for a modern, intuitive interface and powered by MySQL for secure data management, ACADEMIX is your all-in-one solution for academic organization and collaboration. Whether you’re tracking grades, managing timetables, or staying in touch with teachers and parents, ACADEMIX makes it easy and efficient! 🚀
+# 🎓 ACADEMIX – Academic Management System
 
-🌟 Features
-Multi-Role Support:
-Custom dashboards for Students, Teachers, and Parents, each tailored to specific needs.
+Welcome to **ACADEMIX** — your all-in-one academic management platform built for seamless collaboration among students, teachers, and parents.
 
-Secure Authentication:
-Robust registration and login system to protect user data.
+Designed with a **JavaFX** interface and powered by a **MySQL** backend, ACADEMIX ensures intuitive navigation, secure data handling, and smooth performance across all user roles.
 
-Grade Management:
-Teachers can submit grades; students and parents can view them instantly.
+---
 
-Timetable Organization:
-Easily manage and view class schedules and timetables.
+## 🌟 Key Features
 
-Feedback System:
-Enables students to send feedback and teachers to respond, fostering open communication.
+### 👥 Multi-Role Dashboards
+- **Students** – View grades, feedback, and timetable.
+- **Teachers** – Manage grades, provide feedback, update timetables.
+- **Parents** – Track student performance and teacher remarks.
 
-Parent Portal:
-Dedicated dashboard for parents to monitor student progress and feedback.
+### 🔐 Authentication & Authorization
+- Secure login and registration flow.
+- Role-based access for data protection and personalization.
 
-User-Friendly Interface:
-Clean, modern JavaFX UI for a seamless user experience.
+### 📊 Grade and Feedback Management
+- Teachers can add/edit grades with subject-level details.
+- Students and parents can view performance charts and textual feedback.
 
-🗂️ Project Structure
-src/ — Java source files (controllers, models, utilities)
+### 📆 Timetable Integration
+- Role-specific timetable views.
+- Teachers can update schedules directly via the dashboard.
 
-*.fxml — JavaFX layout files for dashboards and forms
+### 💬 Communication Channel
+- Feedback system between students and teachers.
+- Parents can view this exchange for real-time updates.
 
-database/academix_schema.sql — SQL file for MySQL database schema
+### 🧭 Modern UI/UX
+- Built using JavaFX with responsive FXML layouts and CSS styling.
+- User-centric design for clarity and ease of use.
 
-🚀 Getting Started
-Get ACADEMIX running on your local machine in a few simple steps:
+---
 
-Clone the Repository
+## 🔍 Evaluation Criteria (Review 2)
 
-bash
-git clone https://github.com/Shivam003scse/ACADEMIX.git
-Set Up the Database
+ACADEMIX has been developed in alignment with the following **Review 2 Guidelines** for project evaluation:
 
-Import database/academix_schema.sql into your MySQL server to create all necessary tables.
+### ✅ Core Feature Implementation
+- All essential modules like authentication, grade management, timetable view, and feedback system are **fully functional and integrated**.
+- Role-based dashboards provide **distinct workflows** and UI elements.
 
-Configure Database Connection
+### 🛡️ Error Handling & Robustness
+- Invalid inputs trigger meaningful error messages using alert dialogs.
+- No crash on null data or failed DB connection; fallback options and logging ensure continuity.
 
-Open src/DatabaseConfig.java and enter your MySQL username and password.
+### 🔗 Integration of Components
+- Smooth navigation between login, dashboards, and action panels.
+- Unified design and communication between the **DAO**, **Model**, and **Controller** layers using MVC principles.
 
-Build and Run
+### ⚙️ Event Handling & Processing
+- All buttons and input fields are managed by optimized **JavaFX event listeners**.
+- Events are handled efficiently to avoid UI freeze or lag.
 
-Open the project in your favorite Java IDE (e.g., IntelliJ IDEA, Eclipse).
+### 🧮 Data Validation
+- **Client-side validation**: Prevent empty fields, incorrect data types, etc.
+- **Server-side validation**: Checks in DAO layer before DB queries ensure consistent and secure operations.
 
-Run Main.java to launch the application.
+### 🧹 Code Quality & Innovation
+- Modular and reusable code with separation of concerns.
+- Clear folder structure: `controller`, `model`, `dao`, `utils`, and `fxml`.
+- Innovative additions include:
+  - Graph-based performance analysis.
+  - Role-specific UI.
+  - Integrated timetable feature.
 
-🛠️ Technologies Used
-Java 8+ — Core programming language
+---
 
-JavaFX — Modern desktop UI framework
+## 🗂️ Project Structure
 
-MySQL — Reliable relational database
+ACADEMIX/
+├── src/
+│ ├── controller/ # Handles user actions and UI logic
+│ ├── model/ # Java classes for Users, Grades, Subjects, etc.
+│ ├── dao/ # Database access (CRUD) operations
+│ ├── utils/ # Utility classes like DB config, OTP
+│ └── Main.java # App entry point
+├── resources/
+│ ├── fxml/ # FXML layout files
+│ ├── css/ # JavaFX UI styles
+├── database/
+│ └── academix_schema.sql # MySQL DB schema
+├── pom.xml # Maven build file
+└── README.md
 
-JDBC — Database connectivity
 
-🗃️ Database Overview
-ACADEMIX uses a normalized MySQL schema with tables for:
 
-users — Authentication and role management
+🛠️ Set Up the Database
+Use MySQL Workbench or any SQL client to import:
 
-students, teachers, parents — User details
+pgsql
+Copy
+Edit
+database/academix_schema.sql
 
-subjects, grades, timetables — Academic data
 
-feedback — Communication between students and teachers
+⚙️ Configure Your Database Credentials
+Update DatabaseConfig.java:
 
-🤝 Contributing
-We welcome contributions! If you have ideas or improvements, please fork the repository, create a feature branch, and submit a pull request. For major changes, open an issue first to discuss your ideas. Let’s make ACADEMIX better together! ✨
+String url = "jdbc:mysql://localhost:3306/academix";
+String user = "root";
+String password = "Shivam@8453";
 
-👥 Team Members
-This project is proudly developed by:
 
-ABHISHEK NANDAN
+▶️ Run the App
+Open in IntelliJ or Eclipse.
 
-NITISH KUMAR TIWARI
+Execute Main.java.
 
-GAURAV BHATI
+Or use terminal:
 
-SHIVAM MISHRA
 
-We are passionate about building tools that empower education and foster better communication within academic communities! 💡
+mvn clean install
+mvn javafx:run
 
-📜 License
-This project is open-source under the MIT License. See the LICENSE file for details.
 
-📬 Contact
-For questions, suggestions, or support, please open an issue on this repository. We look forward to your feedback!
+🛠️ Tech Stack
 
-Empowering education, one click at a time! 🌱✨
+Java 8+
+
+JavaFX – Modern GUI framework
+
+MySQL – Relational database
+
+JDBC – Database communication
+
+Maven – Dependency management
+
+
+
+📃 Database Overview
+Normalized MySQL schema with key tables:
+
+users – Stores login credentials and roles
+
+students, teachers, parents – Profile data
+
+subjects, grades, timetables – Academic records
+
+feedback – Communication entries between teachers and students
+
+
+
+👥 Developed By
+Abhishek Nandan
+
+Nitish Kumar Tiwari
+
+Gaurav Bhati
+
+Shivam Mishra
+
+We’re passionate about building tools that empower educational systems with technology. 🌍
+
