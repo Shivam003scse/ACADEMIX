@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.TimetableViewController"
+            style="-fx-background-color: linear-gradient(to bottom right, #181c24, #232526);"
+            prefWidth="700" prefHeight="420">
+    <VBox alignment="CENTER" spacing="18.0"
+          AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0"
+          style="-fx-background-color: #232526; -fx-padding: 24; -fx-background-radius: 18; -fx-effect: dropshadow(gaussian, #00c6ff44, 16, 0.3, 0, 3);">
+        <Label text="📅 Class Timetable"
+               style="-fx-font-family: 'Poppins Semibold'; -fx-font-size: 22px; -fx-text-fill: #00c6ff;"/>
+        <TableView fx:id="timetableTable" prefWidth="600" prefHeight="260" style="-fx-background-radius: 16; -fx-border-radius: 16; -fx-border-color: #00c6ff; -fx-border-width: 2;">
+            <columns>
+                <TableColumn fx:id="subjectCol" text="Subject" prefWidth="140" style="-fx-font-size: 15px; -fx-font-family: 'Segoe UI Semibold'; -fx-alignment: CENTER;" />
+                <TableColumn fx:id="dayCol" text="Day" prefWidth="100" style="-fx-font-size: 15px; -fx-font-family: 'Segoe UI Semibold'; -fx-alignment: CENTER;" />
+                <TableColumn fx:id="timeCol" text="Time Slot" prefWidth="160" style="-fx-font-size: 15px; -fx-font-family: 'Segoe UI Semibold'; -fx-alignment: CENTER;" />
+                <TableColumn fx:id="teacherCol" text="Teacher" prefWidth="160" style="-fx-font-size: 15px; -fx-font-family: 'Segoe UI Semibold'; -fx-alignment: CENTER;" />
+            </columns>
+        </TableView>
+        <Button fx:id="backButton" text="Back" onAction="#handleBack"
+                style="-fx-background-color: linear-gradient(to right, #00c6ff, #232526); -fx-text-fill: white; -fx-background-radius: 12; -fx-font-size: 16px; -fx-font-family: 'Poppins Medium'; -fx-padding: 8 32; -fx-cursor: hand; margin-top: 10px;"/>
+    </VBox>
+</AnchorPane>
